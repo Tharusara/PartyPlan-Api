@@ -1,4 +1,5 @@
 clone the project
+run command  => cd PartyPlan-Api
 run command  => npm install
 run command  => npm run start
 
@@ -9,6 +10,7 @@ test api with passing query params like below,
 
 running client project
 cd into the client project directory,
+run command  => client
 run command  => npm install
 run command  => npm run start 
 
@@ -22,6 +24,5 @@ run command  => npm run dev
 
 Note: first you have to install node modules for both projects by running the command,
 run command  => npm install then run the above comand in root directory
-
 
 
