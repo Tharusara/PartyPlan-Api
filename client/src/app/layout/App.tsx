@@ -27,10 +27,10 @@ function App() {
       name = '&locations='+name
       queryparm.push(name)
     } 
-    let queryForLocations = queryparm.toString().replace(',', '')
-    if(queryForLocations.search("&locations=&") === 0){
-      queryForLocations = queryForLocations.replaceAll('&locations=', '')
-    }  
+    let queryForLocations = queryparm.toString().replaceAll(',', '')
+    // if(queryForLocations.search("&locations=&") === 0){
+    //   queryForLocations = queryForLocations.replaceAll('&locations=', '')
+    // }  
     axios.get<Weather[]>(`http://localhost:3001/party_plan?from=${activity.fromDate || '2020-10-01'}&to=${activity.toDate || '2020-10-06'}${queryForLocations || '&locations=berlin'}`).then(response => {
         setPicnicDate(response.data);        
       })      
